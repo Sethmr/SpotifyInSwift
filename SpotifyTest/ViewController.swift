@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AudioToolbox
+import AVFoundation
 
 class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate {
     
@@ -22,7 +24,7 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
 
     var player = SPTAudioStreamingController.sharedInstance()
     var isChangingProgress: Bool = false
-    
+    let audioSession = AVAudioSession.sharedInstance()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.trackTitle.text = "Nothing Playing"
@@ -140,9 +142,8 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
     
     
     func handleNewSession() {
-        var auth = SPTAuth.defaultInstance()
+        let auth = SPTAuth.defaultInstance()
         if self.player == nil {
-            var error: Error? = nil
             self.player = SPTAudioStreamingController.sharedInstance()
             do {
                 try self.player?.start(withClientId: auth!.clientID, audioController: nil, allowCaching: true)
@@ -150,17 +151,110 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
                 self.player?.playbackDelegate = self
                 self.player?.diskCache = SPTDiskCache() /* capacity: 1024 * 1024 * 64 */
                 self.player?.login(withAccessToken: auth?.session.accessToken)
-                
-                else {
-                    self.player = nil
-                    var alert = UIAlertController(title: "Error init", message: error!.description, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: { _ in })
-                    self.closeSession()
-                }
             }
             catch let error {
+                self.player = nil
+                let alert = UIAlertController(title: "Error init", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: { _ in })
+                self.closeSession()
             }
+        }
+    }
+    
+    func closeSession() {
+        do {
+            try self.player!.stop()
+            SPTAuth.defaultInstance().session = nil
+            _ = self.navigationController!.popViewController(animated: true)!
+        } catch let error {
+            let alert = UIAlertController(title: "Error deinit", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: { _ in })
+        }
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didReceiveMessage message: String) {
+        let alert = UIAlertController(title: "Message from Spotify", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: { _ in })
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didChangePlaybackStatus isPlaying: Bool) {
+        print("is playing = \(isPlaying)")
+        if isPlaying {
+            self.activateAudioSession()
+        }
+        else {
+            self.deactivateAudioSession()
+        }
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didChange metadata: SPTPlaybackMetadata) {
+        self.updateUI()
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didReceive event: SpPlaybackEvent, withName name: String) {
+        print("didReceivePlaybackEvent: \(event) \(name)")
+        print("isPlaying=\(self.player?.playbackState.isPlaying) isRepeating=\(self.player?.playbackState.isRepeating) isShuffling=\(self.player?.playbackState.isShuffling) isActiveDevice=\(self.player?.playbackState.isActiveDevice) positionMs=\(self.player?.playbackState.position)")
+    }
+    
+    func audioStreamingDidLogout(_ audioStreaming: SPTAudioStreamingController) {
+        self.closeSession()
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didReceiveError error: Error?) {
+        print("didReceiveError: \(error!.localizedDescription)")
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didChangePosition position: TimeInterval) {
+        if self.isChangingProgress {
+            return
+        }
+        let positionDouble = Double(position)
+        let durationDouble = Double(self.player!.metadata.currentTrack!.duration)
+        self.progressSlider.value = Float(positionDouble / durationDouble)
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didStartPlayingTrack trackUri: String) {
+        print("Starting \(trackUri)")
+        print("Source \(self.player?.metadata.currentTrack?.playbackSourceUri)")
+        // If context is a single track and the uri of the actual track being played is different
+        // than we can assume that relink has happended.
+        let isRelinked = self.player!.metadata.currentTrack!.playbackSourceUri.contains("spotify:track") && !(self.player!.metadata.currentTrack!.playbackSourceUri == trackUri)
+        print("Relinked \(isRelinked)")
+    }
+    
+    func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didStopPlayingTrack trackUri: String) {
+        print("Finishing: \(trackUri)")
+    }
+    
+    func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController) {
+        self.updateUI()
+        self.player?.playSpotifyURI("spotify:user:spotify:playlist:2yLXxKhhziG2xzy7eyD4TD", startingWith: 0, startingWithPosition: 10) { error in
+            if error != nil {
+                print("*** failed to play: \(error)")
+                return
+            }
+        }
+    }
+    
+    func activateAudioSession() {
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            try audioSession.setActive(true)
+        }
+        catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func deactivateAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setActive(false)
+        }
+        catch let error {
+            print(error.localizedDescription)
         }
     }
 }
