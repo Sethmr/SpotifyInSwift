@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CDAFD8C1DD638E700B40271 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAFD8B1DD638E700B40271 /* ViewController.swift */; };
+		4CDAFD8E1DD64E6700B40271 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAFD8D1DD64E6700B40271 /* WebViewController.swift */; };
 		5D46A1E21DC50D8400D0208D /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D46A1DF1DC50D8400D0208D /* SpotifyAudioPlayback.framework */; };
 		5D46A1E31DC50D8400D0208D /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D46A1E01DC50D8400D0208D /* SpotifyAuthentication.framework */; };
 		5D46A1E41DC50D8400D0208D /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D46A1E11DC50D8400D0208D /* SpotifyMetadata.framework */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CDAFD8B1DD638E700B40271 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CDAFD8D1DD64E6700B40271 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5D46A1DF1DC50D8400D0208D /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		5D46A1E01DC50D8400D0208D /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		5D46A1E11DC50D8400D0208D /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				5D8898CD1DC2D009003170BE /* AppDelegate.swift */,
+				4CDAFD8B1DD638E700B40271 /* ViewController.swift */,
+				4CDAFD8D1DD64E6700B40271 /* WebViewController.swift */,
 				5D8898CF1DC2D009003170BE /* LoginViewController.swift */,
 				5D8898D11DC2D009003170BE /* Main.storyboard */,
 				5D8898D41DC2D009003170BE /* Assets.xcassets */,
@@ -167,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDAFD8C1DD638E700B40271 /* ViewController.swift in Sources */,
 				5D8898D01DC2D009003170BE /* LoginViewController.swift in Sources */,
 				5D8898CE1DC2D009003170BE /* AppDelegate.swift in Sources */,
+				4CDAFD8E1DD64E6700B40271 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,13 +27,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="700"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS SDK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7J-KS-kVo">
-                                <rect key="frame" x="90" y="84" width="171.5" height="53"/>
+                                <rect key="frame" x="90" y="84" width="172" height="53"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDE-kB-UEX">
-                                <rect key="frame" x="79.5" y="620" width="191" height="30"/>
+                                <rect key="frame" x="80" y="620" width="191" height="30"/>
                                 <state key="normal" title="Clear cookies in UIWebView">
                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,13 +55,13 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhA-6z-xP9">
-                                <rect key="frame" x="138.5" y="540" width="74" height="18"/>
+                                <rect key="frame" x="139" y="540" width="74" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Track Playback Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmK-Im-C1J">
-                                <rect key="frame" x="67.5" y="139" width="216.5" height="18"/>
+                                <rect key="frame" x="67" y="139" width="217" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showSpotifyAppStoreClicked:" destination="OLw-yI-dNh" eventType="touchUpInside" id="PlM-Ka-K9u"/>
+                                    <action selector="showSpotifyAppStoreClicked:" destination="OLw-yI-dNh" eventType="touchUpInside" id="amw-8k-5H7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,7 +129,7 @@
         <!--View Controller-->
         <scene sceneID="Gfb-sM-Ol3">
             <objects>
-                <viewController id="zum-gU-zPL" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="zum-gU-zPL" customClass="ViewController" customModule="SpotifyTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="079-me-KDR"/>
                         <viewControllerLayoutGuide type="bottom" id="lbk-mj-8MK"/>
@@ -154,7 +154,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="rewind:" destination="zum-gU-zPL" eventType="touchUpInside" id="snW-NL-xr2"/>
+                                    <action selector="rewind:" destination="zum-gU-zPL" eventType="touchUpInside" id="rit-3N-vuQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhK-5e-BKj">
@@ -167,7 +167,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="fastForward:" destination="zum-gU-zPL" eventType="touchUpInside" id="cir-H5-Xry"/>
+                                    <action selector="fastForward:" destination="zum-gU-zPL" eventType="touchUpInside" id="Bny-vh-3RC"/>
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wdA-iv-oRf">
@@ -187,7 +187,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutClicked:" destination="zum-gU-zPL" eventType="touchUpInside" id="9QU-n1-1AB"/>
+                                    <action selector="logoutClicked:" destination="zum-gU-zPL" eventType="touchUpInside" id="ZIA-yD-5hC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKW-MG-Fkz">
@@ -197,7 +197,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="playPause:" destination="zum-gU-zPL" eventType="touchUpInside" id="56K-cc-KOd"/>
+                                    <action selector="playPause:" destination="zum-gU-zPL" eventType="touchUpInside" id="NQt-UW-YPD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-N3-HNg">
@@ -209,8 +209,8 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uoJ-mE-QBc">
                                 <rect key="frame" x="29" y="484" width="292" height="31"/>
                                 <connections>
-                                    <action selector="proggressTouchDown:" destination="zum-gU-zPL" eventType="touchDown" id="bIS-U1-JHm"/>
-                                    <action selector="seekValueChanged:" destination="zum-gU-zPL" eventType="touchUpInside" id="bNB-cr-XaZ"/>
+                                    <action selector="proggressTouchDown:" destination="zum-gU-zPL" eventType="touchDown" id="SkE-Ly-olc"/>
+                                    <action selector="seekValueChanged:" destination="zum-gU-zPL" eventType="valueChanged" id="kTE-An-z4e"/>
                                 </connections>
                             </slider>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tky-X1-WT1" colorLabel="IBBuiltInLabel-Green">
@@ -259,15 +259,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Td-bv-yt1"/>
                     <connections>
-                        <outlet property="artistTitle" destination="dhF-N3-HNg" id="1Rt-ix-2iv"/>
-                        <outlet property="coverView" destination="zGW-EJ-4Z5" id="TGH-IF-Gpi"/>
-                        <outlet property="coverView2" destination="tky-X1-WT1" id="Xud-FH-L1F"/>
-                        <outlet property="nextButton" destination="qhK-5e-BKj" id="NjM-c4-Lcz"/>
-                        <outlet property="playbackSourceTitle" destination="dgz-xX-pCC" id="sj9-GU-2e3"/>
-                        <outlet property="prevButton" destination="muw-G8-uth" id="f2W-zA-Nio"/>
-                        <outlet property="progressSlider" destination="uoJ-mE-QBc" id="RUu-l1-SXe"/>
-                        <outlet property="spinner" destination="wdA-iv-oRf" id="ubc-Ak-PX1"/>
-                        <outlet property="trackTitle" destination="4Aq-Uc-vH8" id="0yP-DJ-Mt0"/>
+                        <outlet property="artistTitle" destination="dhF-N3-HNg" id="0Lu-f0-d7Q"/>
+                        <outlet property="coverView" destination="zGW-EJ-4Z5" id="O3k-5d-1wn"/>
+                        <outlet property="coverView2" destination="tky-X1-WT1" id="UrZ-vE-xr2"/>
+                        <outlet property="nextButton" destination="qhK-5e-BKj" id="nkC-1E-0td"/>
+                        <outlet property="playbackSourceTitle" destination="dgz-xX-pCC" id="qZ1-fW-WKA"/>
+                        <outlet property="prevButton" destination="muw-G8-uth" id="0Kz-jh-K4m"/>
+                        <outlet property="progressSlider" destination="uoJ-mE-QBc" id="f6N-yS-cIo"/>
+                        <outlet property="spinner" destination="wdA-iv-oRf" id="ePX-Yo-8RD"/>
+                        <outlet property="trackTitle" destination="4Aq-Uc-vH8" id="W8c-z1-fKi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yil-ER-zqT" sceneMemberID="firstResponder"/>
@@ -276,6 +276,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="350" height="701"/>
+        <image name="background" width="562" height="1208"/>
     </resources>
 </document>
