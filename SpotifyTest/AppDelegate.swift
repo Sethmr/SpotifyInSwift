@@ -31,9 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
         
         SPTAuth.defaultInstance().clientID = kClientId
         SPTAuth.defaultInstance().redirectURL = URL(string:kCallbackURL)
-        SPTAuth.defaultInstance().tokenSwapURL = URL(string:kTokenSwapURL)
+        //SPTAuth.defaultInstance().tokenSwapURL = URL(string:kTokenSwapURL)
         SPTAuth.defaultInstance().requestedScopes = [SPTAuthStreamingScope]
-        SPTAuth.defaultInstance().tokenRefreshURL = URL(string: kTokenRefreshServiceURL)!
+        //SPTAuth.defaultInstance().tokenRefreshURL = URL(string: kTokenRefreshServiceURL)!
         SPTAuth.defaultInstance().sessionUserDefaultsKey = kSessionUserDefaultsKey
 
         return true
@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         // Ask SPTAuth if the URL given is a Spotify authentication callback
 
+        print("The URL: \(url)")
         if SPTAuth.defaultInstance().canHandle(url) {
             SPTAuth.defaultInstance().handleAuthCallback(withTriggeredAuthURL: url) { error, session in
                 // This is the callback that'll be triggered when auth is completed (or fails).
