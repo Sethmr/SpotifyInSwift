@@ -26,8 +26,6 @@ class AlternativeLoginViewController: UIViewController {
     
     @IBAction func submitButtonWasPressed(_ sender: UIButton) {
         print("submitButtonWasPressed")
-        username = "chief117project3"
-        password = "oneandonlym8"
         
         if username != nil && password != nil {
             print("username: \(username!), password: \(password!)")

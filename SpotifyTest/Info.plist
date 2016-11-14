@@ -43,7 +43,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.SpotifyTest.spotify-auth</string>
+			<string>com.spotify.spotify-action</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>SpotifyTest</string>
