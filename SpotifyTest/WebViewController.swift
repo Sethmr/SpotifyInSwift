@@ -28,7 +28,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(initialURL)
         let initialRequest = URLRequest(url: self.initialURL)
         self.webView = UIWebView(frame: self.view.bounds)
         self.webView.delegate = self

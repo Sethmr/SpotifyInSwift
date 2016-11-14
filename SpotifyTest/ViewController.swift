@@ -160,7 +160,7 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
         do {
             try SPTAudioStreamingController.sharedInstance().stop()
             SPTAuth.defaultInstance().session = nil
-            _ = self.navigationController!.popViewController(animated: true)!
+            _ = self.navigationController!.popViewController(animated: true)
         } catch let error {
             let alert = UIAlertController(title: "Error deinit", message: error.localizedDescription, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -185,7 +185,6 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
     }
     
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didChange metadata: SPTPlaybackMetadata) {
-        
         self.updateUI()
     }
     
