@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import SafariServices
+import WebKit
 
-class LoginViewController: UIViewController, SFSafariViewControllerDelegate, SPTStoreControllerDelegate {
+class LoginViewController: UIViewController, SPTStoreControllerDelegate, WebViewControllerDelegate {
     
     @IBOutlet weak var statusLabel: UILabel!
     var authViewController: UIViewController?
@@ -52,10 +52,10 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate, SPT
     }
     
     func getAuthViewController(withURL url: URL) -> UIViewController {
-        let safari = SFSafariViewController(url: url)
-        safari.delegate = self
-        safari.modalPresentationStyle = .pageSheet
-        return safari
+        let webView = WebViewController(url: url)
+        webView.delegate = self
+
+        return UINavigationController(rootViewController: webView)
     }
     
     func sessionUpdatedNotification(_ notification: Notification) {
@@ -88,8 +88,7 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate, SPT
         let auth = SPTAuth.defaultInstance()
         if SPTAuth.supportsApplicationAuthentication() {
             UIApplication.shared.openURL(auth!.spotifyAppAuthenticationURL())
-        }
-        else {
+        } else {
             self.authViewController = self.getAuthViewController(withURL: SPTAuth.defaultInstance().spotifyWebAuthenticationURL())
             self.definesPresentationContext = true
             self.present(self.authViewController!, animated: true, completion: { _ in })
@@ -110,10 +109,10 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate, SPT
         }
     }
     
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+    func webViewControllerDidFinish(_ controller: WebViewController) {
         // User tapped the close button. Treat as auth error
     }
-    
+  
     @IBAction func loginButtonWasPressed(_ sender: SPTConnectButton) {
         self.openLoginPage()
     }
