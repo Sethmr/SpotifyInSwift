@@ -11,14 +11,12 @@ import WebKit
 
 class LoginViewController: UIViewController, SPTStoreControllerDelegate, WebViewControllerDelegate {
     
-    @IBOutlet weak var alternateLoginButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     var authViewController: UIViewController?
     var firstLoad: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alternateLoginButton.layer.cornerRadius = alternateLoginButton.bounds.height / 2
         NotificationCenter.default.addObserver(self, selector: #selector(self.sessionUpdatedNotification), name: NSNotification.Name(rawValue: "sessionUpdated"), object: nil)
         self.statusLabel.text = ""
         self.firstLoad = true
