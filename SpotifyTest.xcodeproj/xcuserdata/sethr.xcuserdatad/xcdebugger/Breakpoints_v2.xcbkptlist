@@ -35,5 +35,101 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyTest/AlternativeLoginViewController.swift"
+            timestampString = "500843358.513883"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "performAPICall(_:resultHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyTest.AlternativeLoginViewController.(performAPICall (Foundation.URL, resultHandler : (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "SpotifyTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
+                  timestampString = "500843358.631523"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyTest.AlternativeLoginViewController.(performAPICall (Foundation.URL, resultHandler : (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "SpotifyTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
+                  timestampString = "500843358.633155"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "238">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyTest/AlternativeLoginViewController.swift"
+            timestampString = "500843358.513883"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "performAPICall(_:resultHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyTest.AlternativeLoginViewController.performAPICall (Foundation.URL, resultHandler : (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SpotifyTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
+                  timestampString = "500843358.635886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "307">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyTest.AlternativeLoginViewController.(performAPICall (Foundation.URL, resultHandler : (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "SpotifyTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
+                  timestampString = "500843358.637008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
