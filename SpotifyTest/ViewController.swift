@@ -137,25 +137,22 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.handleNewSession()
-        print("session: \(SPTAuth.defaultInstance().session.accessToken)")
+        print("session: \(SPTAuth.defaultInstance().session.accessToken!)")
     }
     
     
     func handleNewSession() {
-        let auth = SPTAuth.defaultInstance()
-        if SPTAudioStreamingController.sharedInstance() == nil {
-            do {
-                try SPTAudioStreamingController.sharedInstance().start(withClientId: auth!.clientID, audioController: nil, allowCaching: true)
-                SPTAudioStreamingController.sharedInstance().delegate = self
-                SPTAudioStreamingController.sharedInstance().playbackDelegate = self
-                SPTAudioStreamingController.sharedInstance().diskCache = SPTDiskCache() /* capacity: 1024 * 1024 * 64 */
-                SPTAudioStreamingController.sharedInstance().login(withAccessToken: auth?.session.accessToken)
-            } catch let error {
-                let alert = UIAlertController(title: "Error init", message: error.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: { _ in })
-                self.closeSession()
-            }
+        do {
+            try SPTAudioStreamingController.sharedInstance().start(withClientId: SPTAuth.defaultInstance().clientID, audioController: nil, allowCaching: true)
+            SPTAudioStreamingController.sharedInstance().delegate = self
+            SPTAudioStreamingController.sharedInstance().playbackDelegate = self
+            SPTAudioStreamingController.sharedInstance().diskCache = SPTDiskCache() /* capacity: 1024 * 1024 * 64 */
+            SPTAudioStreamingController.sharedInstance().login(withAccessToken: SPTAuth.defaultInstance().session.accessToken!)
+        } catch let error {
+            let alert = UIAlertController(title: "Error init", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: { _ in })
+            self.closeSession()
         }
     }
     
@@ -188,6 +185,7 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
     }
     
     func audioStreaming(_ audioStreaming: SPTAudioStreamingController, didChange metadata: SPTPlaybackMetadata) {
+        
         self.updateUI()
     }
     

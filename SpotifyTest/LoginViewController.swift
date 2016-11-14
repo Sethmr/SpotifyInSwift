@@ -99,9 +99,8 @@ class LoginViewController: UIViewController, SPTStoreControllerDelegate, WebView
     
     func renewTokenAndShowPlayer() {
         self.statusLabel.text = "Refreshing token..."
-        let auth = SPTAuth.defaultInstance()
-        auth!.renewSession(auth!.session) { error, session in
-            auth!.session = session
+        SPTAuth.defaultInstance().renewSession(SPTAuth.defaultInstance().session) { error, session in
+            SPTAuth.defaultInstance().session = session
             if error != nil {
                 self.statusLabel.text = "Refreshing token failed."
                 print("*** Error renewing session: \(error)")

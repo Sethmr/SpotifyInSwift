@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SpotifyTest/LoginViewController.swift"
-            timestampString = "500848257.663282"
+            filePath = "SpotifyTest/ViewController.swift"
+            timestampString = "500849135.998086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "audioStreaming(_:didChange:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
