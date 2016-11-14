@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SpotifyTest/LoginViewController.swift"
-            timestampString = "500840248.537439"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SpotifyTest/AlternativeLoginViewController.swift"
             timestampString = "500843358.513883"
             startingColumnNumber = "9223372036854775807"
@@ -49,38 +33,6 @@
             endingLineNumber = "71"
             landmarkName = "performAPICall(_:resultHandler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpotifyTest.AlternativeLoginViewController.(performAPICall (Foundation.URL, resultHandler : (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "SpotifyTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
-                  timestampString = "500843358.631523"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpotifyTest.AlternativeLoginViewController.(performAPICall (Foundation.URL, resultHandler : (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "SpotifyTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
-                  timestampString = "500843358.633155"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "238">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,7 +58,7 @@
                   moduleName = "SpotifyTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
-                  timestampString = "500843358.635886"
+                  timestampString = "500843823.703798"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "69"
@@ -121,7 +73,7 @@
                   moduleName = "SpotifyTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sethr/Desktop/SpotifyInSwift/SpotifyTest/AlternativeLoginViewController.swift"
-                  timestampString = "500843358.637008"
+                  timestampString = "500843823.70505"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "72"

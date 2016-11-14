@@ -10,6 +10,7 @@ import UIKit
 
 class AlternativeLoginViewController: UIViewController {
 
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var username: String?
@@ -17,6 +18,7 @@ class AlternativeLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        submitButton.layer.cornerRadius = submitButton.bounds.height / 2
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         // Do any additional setup after loading the view.

@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Login View Controller-->
         <scene sceneID="717-MR-m5B">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OLw-yI-dNh" customClass="LoginViewController" customModule="SpotifyTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDE-kB-UEX">
-                                <rect key="frame" x="80" y="620" width="191" height="30"/>
+                                <rect key="frame" x="80" y="520" width="191" height="30"/>
                                 <state key="normal" title="Clear cookies in UIWebView">
                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-NW-yIg" customClass="SPTConnectButton">
-                                <rect key="frame" x="42" y="566" width="266" height="46"/>
+                                <rect key="frame" x="42" y="466" width="266" height="46"/>
                                 <color key="backgroundColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -55,7 +55,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhA-6z-xP9">
-                                <rect key="frame" x="138" y="540" width="74" height="18"/>
+                                <rect key="frame" x="138" y="440" width="74" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIl-An-had">
-                                <rect key="frame" x="94" y="653" width="163" height="30"/>
+                                <rect key="frame" x="94" y="553" width="163" height="30"/>
                                 <state key="normal" title="Show Spotify App Store">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -76,14 +76,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AK-g2-IvR">
-                                <rect key="frame" x="42" y="430" width="266" height="46"/>
-                                <color key="backgroundColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="42" y="595" width="266" height="46"/>
+                                <color key="backgroundColor" red="0.23106002807617188" green="0.79603415727615356" blue="0.40617895126342773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="kzn-2d-Ncy"/>
                                     <constraint firstAttribute="width" constant="266" id="tdZ-Ek-I3e"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Alternate Login">
-                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="VeM-nP-YhP" kind="show" id="Agv-28-ukX"/>
@@ -92,8 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.066681338029999995" green="0.066681338029999995" blue="0.066681338029999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WhA-6z-xP9" firstAttribute="top" secondItem="4AK-g2-IvR" secondAttribute="bottom" constant="64" id="01L-AA-3gd"/>
-                            <constraint firstItem="Jec-ea-KVF" firstAttribute="bottom" secondItem="ZDE-kB-UEX" secondAttribute="bottom" constant="50" id="5hM-mY-gEW"/>
+                            <constraint firstItem="Jec-ea-KVF" firstAttribute="bottom" secondItem="ZDE-kB-UEX" secondAttribute="bottom" constant="150" id="5hM-mY-gEW"/>
                             <constraint firstAttribute="centerX" secondItem="Jec-ea-KVF" secondAttribute="centerX" id="8bn-z1-0lq"/>
                             <constraint firstItem="Jec-ea-KVF" firstAttribute="top" secondItem="y7J-KS-kVo" secondAttribute="top" constant="-84" id="9dc-hl-bNO"/>
                             <constraint firstItem="ZDE-kB-UEX" firstAttribute="top" secondItem="BFZ-NW-yIg" secondAttribute="bottom" constant="8" id="ApS-RE-iUA"/>
@@ -110,12 +110,14 @@
                             <constraint firstItem="Jec-ea-KVF" firstAttribute="width" secondItem="GGB-t1-bV2" secondAttribute="width" id="rwf-3O-KRL"/>
                             <constraint firstItem="HIl-An-had" firstAttribute="top" secondItem="ZDE-kB-UEX" secondAttribute="bottom" constant="3" id="vLz-Wg-QTu"/>
                             <constraint firstItem="HIl-An-had" firstAttribute="centerX" secondItem="Jec-ea-KVF" secondAttribute="centerX" id="z0N-MU-yBA"/>
+                            <constraint firstItem="4AK-g2-IvR" firstAttribute="top" secondItem="HIl-An-had" secondAttribute="bottom" constant="12" id="zZn-0E-1cW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="4a3-O1-Kk5"/>
+                    <navigationItem key="navigationItem" id="4a3-O1-Kk5"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="350" height="700"/>
                     <connections>
+                        <outlet property="alternateLoginButton" destination="4AK-g2-IvR" id="dKj-ds-hiS"/>
                         <outlet property="statusLabel" destination="WhA-6z-xP9" id="QCG-im-il8"/>
                         <segue destination="zum-gU-zPL" kind="show" identifier="ShowPlayer" id="skI-tp-OiN"/>
                     </connections>
@@ -171,13 +173,14 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUA-VI-abR">
                                 <rect key="frame" x="75" y="622" width="200" height="46"/>
-                                <color key="backgroundColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.23106002810000001" green="0.79603415730000004" blue="0.40617895129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="10t-PJ-mS1"/>
                                     <constraint firstAttribute="height" constant="46" id="yWH-ur-6S5"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submitButtonWasPressed:" destination="VeM-nP-YhP" eventType="touchUpInside" id="IYO-le-tft"/>
@@ -212,6 +215,7 @@
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="ALm-H5-V6X" id="ksY-us-v0c"/>
+                        <outlet property="submitButton" destination="UUA-VI-abR" id="hTM-uv-d9H"/>
                         <outlet property="usernameTextField" destination="mrq-bF-xif" id="kbd-cx-hS6"/>
                     </connections>
                 </viewController>
