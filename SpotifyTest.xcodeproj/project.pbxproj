@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C8504861DDA3BEF00A8BB74 /* AlternativeLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8504851DDA3BEF00A8BB74 /* AlternativeLoginViewController.swift */; };
 		4CDAFD8C1DD638E700B40271 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAFD8B1DD638E700B40271 /* ViewController.swift */; };
 		4CDAFD8E1DD64E6700B40271 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAFD8D1DD64E6700B40271 /* WebViewController.swift */; };
 		5D46A1E21DC50D8400D0208D /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D46A1DF1DC50D8400D0208D /* SpotifyAudioPlayback.framework */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C8504851DDA3BEF00A8BB74 /* AlternativeLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlternativeLoginViewController.swift; sourceTree = "<group>"; };
 		4CDAFD8B1DD638E700B40271 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4CDAFD8D1DD64E6700B40271 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5D46A1DF1DC50D8400D0208D /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				4CDAFD8D1DD64E6700B40271 /* WebViewController.swift */,
 				5D8898CF1DC2D009003170BE /* LoginViewController.swift */,
 				5D8898D11DC2D009003170BE /* Main.storyboard */,
-				4C8504851DDA3BEF00A8BB74 /* AlternativeLoginViewController.swift */,
 				5D8898D41DC2D009003170BE /* Assets.xcassets */,
 				5D8898D61DC2D009003170BE /* LaunchScreen.storyboard */,
 				5D8898D91DC2D009003170BE /* Info.plist */,
@@ -176,7 +173,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8504861DDA3BEF00A8BB74 /* AlternativeLoginViewController.swift in Sources */,
 				4CDAFD8C1DD638E700B40271 /* ViewController.swift in Sources */,
 				5D8898D01DC2D009003170BE /* LoginViewController.swift in Sources */,
 				5D8898CE1DC2D009003170BE /* AppDelegate.swift in Sources */,
