@@ -6,7 +6,8 @@ I spent a while looking for this online, and I was only able to come up with bit
 The code might not be as well put together as I could make it. I spent a while trying to get a session to activate properly and changing the code around. Take special note of the plist. It may have extraneous parts, but some of it will likely be necessary to get the project working.
 
 
-**Links**
+# Links
+
 [Spotify](https://www.spotify.com/)
 
 [Spotify iOS SDK Info](https://developer.spotify.com/technologies/spotify-ios-sdk/)
